@@ -5,7 +5,7 @@
 
 <html>
 <head>
-<title>CH7 - Fmt_i18n.jsp</title>
+<title></title>
 </head>
 <body>
 

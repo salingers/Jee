@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>CH7 - Core_redirect.jsp</title>
+<title></title>
 </head>
 <body>
 

@@ -3,7 +3,7 @@
 
 <html>
 <head>
-  <title>CH4 - Error.jsp</title>
+  <title></title>
 </head>
 <body>
 

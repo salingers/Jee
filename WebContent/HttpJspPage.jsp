@@ -6,7 +6,6 @@
 </head>
 <body>
 
-	<h2>page ┴Їзtклеє</h2>
 
 	Page Info =
 	<%=((javax.servlet.jsp.HttpJspPage) page).getServletInfo()%>

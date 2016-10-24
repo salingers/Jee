@@ -13,36 +13,34 @@
 
 	<%
 		String atts[] = new String[5];
+
 		atts[0] = "hello";
 		atts[1] = "this";
 		atts[2] = "is";
 		atts[3] = "a";
 		atts[4] = "pen";
+
 		request.setAttribute("atts", atts);
 	%>
 
-	<c:forEach items="${atts}" var="item">
+	<c:forEach items="${atts}" var="item" begin="0" end="4" step="1">
 ${item}</br>
 	</c:forEach>
 
-
-	<c:forEach items="${atts}" var="item" begin="1" end="4" step="2">
-${item}</br>
-	</c:forEach>
 
 	<c:forEach items="${atts}" var="item" varStatus="s">
 		<h2>
 			<c:out value="${item}" />
 			的四種屬性：
 		</h2>
-index：${s.index}</br>
-count：${s.count}</br>
-first：${s.first}</br>
-last：${s.last}</br>
+			index：${s.index}</br>
+			count：${s.count}</br>
+			first：${s.first}</br>
+			last：${s.last}</br>
 	</c:forEach>
 
 	<c:forEach begin="1" end="10" var="item">
-${item}</br>
+	${item}</br>
 	</c:forEach>
 
 </body>

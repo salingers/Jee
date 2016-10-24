@@ -14,6 +14,9 @@
 		String Name = (String) application.getAttribute("Name");
 		String Password = (String) application.getAttribute("Password");
 	%>
+	
+Name:<%=Name%><br/>
+Password:<%=Password%><br/>
 
 
 </body>

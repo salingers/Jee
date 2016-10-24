@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>CH5 - GetJspVersion.jsp</title>
+<title></title>
 </head>
 <body>
 
@@ -11,8 +11,8 @@
 
 	<%
 		JspFactory factory = JspFactory.getDefaultFactory();
-		out.println("JSP v " + factory.getEngineInfo().getSpecificationVersion());
 	%>
+	<%=factory.getEngineInfo().getSpecificationVersion()	%>
 
 
 </body>

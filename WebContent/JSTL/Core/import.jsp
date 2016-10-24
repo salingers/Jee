@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>CH7 - Core_import.jsp</title>
+<title></title>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 	<c:set var="input1" value="使用屬性範圍傳到Core_imported.jsp中" scope="request" />	
 	<hr />
 
-	<c:import url="Core_imported.jsp" charEncoding="Big5">
+	<c:import url="imported.jsp" charEncoding="Big5">
 		<c:param name="input2" value="使用param傳到Core_imported.jsp中" />
 	</c:import>
 	

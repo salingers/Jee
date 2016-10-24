@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>CH10 - SessionCounter.jsp</title>
+<title>SessionCounter.jsp</title>
 </head>
 <body>
 

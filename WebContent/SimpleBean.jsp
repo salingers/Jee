@@ -25,8 +25,7 @@
 		class="tw.com.javaworld.SimpleBean" />
 	<jsp:setProperty name="myBean" property="*" />
 
-	姓名：<jsp:getProperty name="myBean" property="name" /><br> 
-	編號：<jsp:getProperty
+	姓名：<jsp:getProperty name="myBean" property="name" /><br> 編號：<jsp:getProperty
 		name="myBean" property="number" />
 
 </body>
