@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="loginForm" type="com.umt.form.LoginForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="loginForm"      
+      name="loginForm"
+      parameter="method"
+      path="/login"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      	<forward name="success" path="/success.jsp"></forward>
+      	<forward name="login" path="/index.jsp"></forward>
+      </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.umt.struts.ApplicationResources" />
+</struts-config>
+

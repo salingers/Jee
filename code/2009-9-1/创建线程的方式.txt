@@ -1,0 +1,50 @@
+创建线程的方式：两种
+
+	第一种：实现Runnable接口
+	
+	第i步：创建一个类，实现Runnable接口
+	例如：
+		class TestRunnable implements Runnable {
+
+			public void run() {
+				
+			}
+		}
+		
+	第ii步：实现run（）方法
+	
+	例如：
+		public void run() {
+				for(int i = 1; i <= 2000; i++){
+					System.out.println(i);
+				}
+		}
+		
+	启动线程类：
+		第i步：创建此类的对象
+			例如：
+				TestRunnable tr = new TestRunnable();
+		第ii步：通过Thread类来启动
+			Thread t = new Thread(tr);
+			t.start();
+			
+			
+			
+	第二种方式：继承Thread类
+	第i步：创建一个线程类，此类继承Thread
+	例如：
+		public class TestThread extends Thread{}
+	第ii步：重写run（）方法
+	例如：
+		public void run() {
+			for(int i = 0; i < 100; i++){
+				System.out.println(i);
+			}
+		}
+		
+	第iii步：启动线程
+		TestThread tt = new TestThread();
+		tt.start();
+		
+	
+		

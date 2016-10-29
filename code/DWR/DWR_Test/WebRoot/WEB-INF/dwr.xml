@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+	<allow>
+		<create creator="new" javascript="test1">
+			<param name="class" value="com.dwr.test.Test1" />
+		</create>	
+		
+		
+		<create creator="new" javascript="test2">
+			<param name="class" value="com.dwr.test.Test2" />
+		</create>	
+		
+		<create creator="new" javascript="test3">
+			<param name="class" value="com.dwr.test.Test3" />
+		</create>	
+		
+		<create creator="new" javascript="test4">
+			<param name="class" value="com.dwr.test.Test4" />
+		</create>
+		
+		<create creator="new" javascript="test5">
+			<param name="class" value="com.dwr.test.Test5" />
+		</create>
+		
+		<create creator="new" javascript="test6">
+			<param name="class" value="com.dwr.test.Test6" />
+		</create>
+		
+		<create creator="new" javascript="test7">
+			<param name="class" value="com.dwr.test.Test7" />
+		</create>
+		
+		<create creator="new" javascript="test8">
+			<param name="class" value="com.dwr.test.Test8" />
+		</create>
+		
+		<create creator="new" javascript="test9">
+			<param name="class" value="com.dwr.test.Test9" />
+		</create>
+		
+		<create creator="new" javascript="test10">
+			<param name="class" value="com.dwr.test.Test10" />
+		</create>
+		
+		<create creator="new" javascript="test11">
+			<param name="class" value="com.dwr.test.Test11" />
+		</create>
+		
+		<convert  converter="bean" match="com.dwr.test.Student"></convert>
+	</allow>
+</dwr>

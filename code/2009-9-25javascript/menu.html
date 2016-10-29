@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>菜单</title>
+		
+		<script type="text/javascript">
+			function showOrCloseMenu(obj){
+				var tr = document.getElementById(obj.id + "_dept");
+				
+				if(tr.style.display == "none"){
+					tr.style.display = "block";
+				}else{
+					tr.style.display = "none";
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<table  width="10%">
+			<tr>
+				<td id="company" bgcolor="yellow" onclick="showOrCloseMenu(this)">				
+				总公司
+				</td>
+			</tr>
+			
+			<tr id="company_dept" style="display:none">
+				<td>
+					<table width="80%">
+						<tr>
+							<td bgcolor="green"><a href="#">开发部</a></td>
+						</tr>
+						<tr>
+							<td bgcolor="green"><a href="#">市场部</a></td>
+						</tr>
+						<tr>
+							<td bgcolor="green"><a href="#">营销部</a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<!--菜单二 -->
+			<tr>
+				<td id="company1" bgcolor="yellow" onclick="showOrCloseMenu(this)">				
+				 分公司
+				</td>
+			</tr>
+			
+			<tr id="company1_dept" style="display:none">
+				<td>
+					<table width="80%">
+						<tr>
+							<td bgcolor="green"><a href="#">开发部</a></td>
+						</tr>
+						<tr>
+							<td bgcolor="green"><a href="#">市场部</a></td>
+						</tr>
+						<tr>
+							<td bgcolor="green"><a href="#">营销部</a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

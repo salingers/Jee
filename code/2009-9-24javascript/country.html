@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>
+			模态窗口
+		</title>
+		<script type="text/javascript">
+			var selectCountry = function(){
+				var country;
+				
+				var countrys = document.getElementsByName("country");
+				for(var i = 0; i < countrys.length; i++){
+					if(countrys[i].checked == true){
+						country = countrys[i].value;
+					}
+				}
+				window.returnValue = country;
+				window.close();
+			}
+			
+			function showMsg(){
+				var msg = window.dialogArguments;
+				var msgDiv = document.getElementById("msg");
+				msgDiv.innerText = msg;
+			}
+		</script>
+	</head>
+	<body onload="showMsg()">
+		<div id="msg">
+		
+		</div>
+		<table>
+			<tr>
+				<td><input type="radio" name="country" value="中国" onclick="selectCountry()"></td>
+				<td>中国</td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="country" value="美国" onclick="selectCountry()"></td>
+				<td>美国</td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="country" value="日本" onclick="selectCountry()"></td>
+				<td>日本</td>
+			</tr>
+		</table>
+	</body>
+</html>

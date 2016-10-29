@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>正则表达式——验证输入的是否为数值</title>
+			<script type="text/javascript">
+				function isEmail(){
+					var reg = /^\w{1,20}@\w+\.\w+(\.\w+)?$/;
+					var email = form1.email.value;
+					
+					if(email.search(reg) != 0){
+						alert("邮箱格式不正确！");
+						return;
+					}
+					
+					alert("邮箱合法！");
+				}
+			</script>
+	</head>
+	<body>
+		<form name="form1">
+			邮箱：<input type="text" name="email"/>
+			<input type="button" value="验证" onclick="isEmail()"/>
+		</form>
+	</body>
+</html>

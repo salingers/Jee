@@ -1,0 +1,91 @@
+1.JavaScript的特点
+
+	a.JavaScript语言不是JAVA语言
+	
+	b.JavaScript语言是解释执行的语言，从上倒下一行一行的执行。
+	
+	c.JavaScript语言可以直接嵌入到HTML文档中，是HTML文档的一部分。
+	
+	d.JavaScript语言是弱语言。
+	
+	
+2.JavaScript语言的结构
+
+	<script language="javascript">
+		alert("HelloWorld");
+		
+		function 方法名([参数]){
+			//方法体
+		}
+	
+	</script>
+	
+	<script type="text/javascript">
+	
+	</script>
+	
+	
+3.JavaScript语言所在的位置
+	三个：
+		在HTML文档的HEAD区：
+			特点：
+				在页面加载时不会被立马执行的程序，
+				它等待HTML标记来调用时才会被执行。
+
+			例如：
+			<script type="text/javascript">
+			
+					var str = "hello";
+					function sayHello(){
+					
+						var str1 = "aaa";
+						
+						alert(str);
+					}
+			</script>
+		
+		在HTML文档的BODY区：
+			
+			特点：
+				在页面加载时会立马执行的JavaScript程序
+				
+				
+				例如：
+					<script type="text/javascript">					
+						document.write("<font color=red>Hello World</font>");
+					</script>
+				
+		在一个外部js文件中：
+			
+			特点：
+				一般是存放在Head区的JavaScript程序；
+				方便JavaScript程序的重用。
+				
+4.JavaScript基本语法
+
+
+	
+	声明变量：
+		
+		关键字：var
+		
+	数据类型：
+		a.数值数据类型  例如： 1,1.1 1.111
+		b.字符串数据类型  例如："hello" , 'helloworld' ,'a', "a"
+		c.布尔数据类型    例如：true、false
+		d.Null数据类型
+		e.undefined数据类型
+		f.特殊字符
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

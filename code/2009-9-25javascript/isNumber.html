@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>正则表达式——验证输入的是否为数值</title>
+			<script type="text/javascript">
+				function isNumber2(number){
+					var num = parseInt(number);
+					if(isNaN(num)){
+						alert("数据非法！");
+					}else{
+						alert("数据合法！");
+					}
+				}
+				
+				function isNumber(number){
+					//var reg = /^\d+$/;
+					var reg = /^[\+\-]?\d+(\.\d+)?$/;
+					if(number.search(reg) != 0){
+						alert("数据非法！");
+					}else{
+						alert("数据合法！");
+					}
+				}
+				
+				function isNumber3(number){
+					var reg = new RegExp(/^\d+$/);
+					alert(reg.test(number));
+					if(reg.test(number)){
+						alert("整数");
+					}else{
+						alert("数据非法");
+					}
+				}
+				
+				
+				
+				function checkNumber(){
+					var number = form1.number.value;
+					
+					if(number == null || number == ""){
+						alert("请输入数值！！");
+						return;
+					}
+					isNumber(number);
+				}
+			</script>
+	</head>
+	<body>
+		<form name="form1">
+			数值：<input type="text" name="number"/>
+			<input type="button" value="验证" onclick="checkNumber()"/>
+		</form>
+	</body>
+</html>

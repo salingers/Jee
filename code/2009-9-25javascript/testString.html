@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>获取页面中的元素</title>
+		<script type="text/javascript" src="string.js"></script>
+		
+		<script type="text/javascript">
+				function showMsg(){
+					//获取页面文本框对象
+					
+					var username = document.getElementById("username").value;					
+					username = username.trim();
+					alert("aaa" + username + "ssss");
+					
+				}
+				
+				
+		</script>
+	</head>
+	
+	<body>
+		<form name="form1" >
+		
+			UserName:<input type="text" name="username" value="" id="username"/><br>
+			PassWorld:<input type="password" name="pwd" id="pwd"/><br>
+			性别：<input type="radio" name="sex" id="sex" value="man"/>男
+				<input type="radio" name="sex"  id="sex" value="woman"/>女<br>
+				
+				<input type="button" name="but" value="验证" onclick="showMsg()"/>
+		</form>	
+	</body>
+</html>

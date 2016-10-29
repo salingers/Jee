@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>×¢²á</title>
+		<script type="text/javascript" src="string.js"></script>
+		
+		<script type="text/javascript">
+			function showCountry(){
+				var msg = form1.msg.value;
+				var country = window.showModalDialog("country.html",msg,"dialogHeight:400px;dialogWidth:300px");
+				document.form1.country.value = country;
+			}
+				
+		</script>
+	</head>
+	
+	<body>
+		<form name="form1" >
+				Msg£º<input type="text" name="msg" value=""/><br>
+			
+				ÇëÑ¡Ôñ¹ú¼®£º<input type="text" name="country" readonly/><input type="button" value="select" onclick="showCountry()"/>
+		</form>	
+	</body>
+</html>

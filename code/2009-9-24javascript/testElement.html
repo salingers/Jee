@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>获取页面中的元素</title>
+		
+		<script type="text/javascript">
+				function showMsg(){
+					//获取页面文本框对象
+					//var username = form1.username.value;
+					var username = document.getElementById("username").value;
+					username = trim(username);
+
+					alert(username + "ssss");
+					
+					if(username == ""){
+						alert("用户名不能为空！");
+						return;
+					}
+					
+					alert("此用户名合法");
+					
+					
+					
+					//获取密码框的值
+				/*	//var pwd = form1.pwd.value;
+				var pwd = document.getElementById("pwd").value;
+					pwd = trim(pwd);
+					
+					alert(pwd);
+					*/
+					
+					//获取radio的值
+				/**/	//var sex = form1.sex;
+				var sex = document.getElementById("sex");
+				alert(sex.value);
+					//alert(sex[0].value);
+					
+				/*	for(var i = 0; i < sex.length; i++){
+						if(sex[i].checked == true){
+							form1.username.value = sex[i].value;
+							alert(sex[i].value);
+						}
+					}
+				*/
+					
+				}
+				//此方法可以去掉字符串前段的空格
+				function trim(str){
+					var leng = str.length;
+					var index = str.indexOf(" ");
+					if(index == 0){
+						str = str.substr(index + 1,leng - 1);
+						
+						if(str.indexOf(" ") == 0){
+							str = trim(str);
+						}
+					}
+
+					//alert(str.lastIndexOf(" "));
+					/*while(str.lastIndexOf(" ") != -1){
+						str = str.substr(0,str.length - 1);
+					}*/
+					
+					return str;
+				}
+				
+				
+		</script>
+	</head>
+	
+	<body>
+		<form name="form1" >
+		
+			UserName:<input type="text" name="username" value="" id="username"/><br>
+			PassWorld:<input type="password" name="pwd" id="pwd"/><br>
+			性别：<input type="radio" name="sex" id="sex" value="man"/>男
+				<input type="radio" name="sex"  id="sex" value="woman"/>女<br>
+				
+				<input type="button" name="but" value="验证" onclick="showMsg()"/>
+		</form>	
+	</body>
+</html>

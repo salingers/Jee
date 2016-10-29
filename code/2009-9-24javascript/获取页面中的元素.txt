@@ -1,0 +1,16 @@
+第一种方法：
+	var obj =  [document.]form名字.元素的名字；
+	
+第二种方法：
+	oElement = document.getElementById(sIDValue)
+	
+	例如：var username = document.getElementById("username")；
+	
+	说明："username"为页面文本框的id属性值
+		oElement:是id属性所指定的一个对象的引用。
+	
+第三种方法：
+	collObjects = document.getElementsByName(sNameValue)；
+	
+	说明：sNameValue:是页面元素的name属性的值；
+		collObjects:是一个对象数组

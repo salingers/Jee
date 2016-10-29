@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>ÈÕÆÚ</title>
+		<script type="text/javascript">
+			function currentTime(){
+				var date = new Date();
+				var year = date.getFullYear();
+				
+				var month = date.getMonth() + 1;
+				month = month.format_time();
+				
+				var day = date.getDate();				
+				day = day.format_time();
+				
+				var h = date.getHours();				
+				h = h.format_time();	
+				
+				var m = date.getMinutes();
+				m = m.format_time();
+				
+				var s = date.getSeconds();
+				s = s.format_time();
+				
+				
+				return year + "-" + month + "-" + day + " " + h + ":" + m + ":" + s;
+				
+					
+			}
+			
+			Number.prototype.format_time = function(){						
+				return this < 10 ? ("0" + this) : this;
+			}
+			
+			function writeDiv(){
+				var currTime = currentTime();
+				var divTime = document.getElementById("time");
+				
+				divTime.innerText = currTime;
+			}
+			
+			function startTime(){
+				window.setInterval("writeDiv()",1000);
+			}
+		</script>
+	</head>
+	<body onload="startTime()">
+		<form name="form1">
+		
+			<marquee><div id="time" style="background:'red';width:200" align="center">
+				
+			</div></marquee>
+		</form>
+	</body>
+</html>

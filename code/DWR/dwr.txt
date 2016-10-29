@@ -1,0 +1,63 @@
+1.拷贝dwr.jar
+
+2.修改web.xml配置文件
+
+
+  <servlet>
+    <servlet-name>dwr-invoker</servlet-name>       
+    <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>   
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>dwr-invoker</servlet-name>
+    <url-pattern>/dwr/*</url-pattern>
+  </servlet-mapping>
+
+3.在web-inf目录下，添加配置文件dwr.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+  <allow>
+    <create creator="new" javascript="test">
+      <param name="class" value="com.dwr.test.DwrTest"/>
+    </create>
+  </allow>
+</dwr>
+
+4.创建WEB页面
+
+ 在页面中引入如下javascript
+
+ <script type='text/javascript' src='dwr/engine.js'></script>
+ <script type='text/javascript' src='dwr/util.js'></script>
+ <script type='text/javascript' src='dwr/interface/test.js'></script>
+
+
+
+<script type="text/javascript">
+   function hello(){
+	test.hello(returnHello);
+   }
+		
+  function returnHello(value){
+	alert(value);
+  }
+</script>
+
+
+5.备注：
+DwrTest.java
+
+package com.dwr.test;
+
+public class DwrTest{
+	public String hello(){
+		return "Hello World!";
+	}
+}

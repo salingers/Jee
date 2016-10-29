@@ -1,0 +1,30 @@
+问题：
+信息: Exec: test10.method2()
+2009-6-26 13:38:03 org.directwebremoting.util.CommonsLoggingOutput error
+严重: No converter found for 'com.dwr.test.Student'
+
+
+问题解决：
+	出错处：在dwr.xml中配置有误。
+
+	<create creator="new" javascript="test10">
+	      <param name="class" value="com.dwr.test.Test10" />
+	</create>
+		
+	<convert match="bean" converter="com.dwr.test.Student"></convert>		//此处有错。
+
+
+
+
+
+
+
+	正确配置：
+	<create creator="new" javascript="test10">
+	      <param name="class" value="com.dwr.test.Test10" />
+	</create>
+		
+	<convert match="com.dwr.test.Student" converter="bean"></convert>
+
+
+

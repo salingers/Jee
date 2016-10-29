@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>
+			Ä£Ì¬´°¿Ú
+		</title>
+		<script type="text/javascript">
+			function isEmail(email){
+				var e = /^\d+$/;
+				alert(email.search(e));
+			}
+
+			function checkEmail(){
+				var email = form1.email.value;
+				isEmail(email);
+			}
+		</script>
+	</head>
+	<body>
+		<form name="form1">
+		<input type="text" name="email" value=""/><input type="button" value="isEmail" onclick="checkEmail()"/>
+
+		</form>
+	</body>
+</html>

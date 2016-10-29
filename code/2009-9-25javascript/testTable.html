@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>table</title>
+		<style type="text/css">
+			th{
+				background:yellow
+			}
+			
+			.tr1{
+				background:red
+			}
+			
+			.tr2{
+				background:white
+			}
+			
+		</style>
+		
+		<script type="text/javascript">
+			function changeColor(obj){
+				var css = obj.className;
+				if(css == "tr1"){
+					obj.className = "tr2";
+				}else{
+					obj.className = "tr1";
+				}
+				
+			}
+		</script>
+	</head>
+	
+	<body>
+		<table border="1" width="80%" align="center">
+			<tr>
+				<th>ÐÕÃû</th>
+				<th>ÐÔ±ð</th>
+				<th>ÄêÁä</th>
+			</tr>
+			
+			<tr class="tr2" onmouseover="changeColor(this)" onmouseout="changeColor(this)">
+				<td>À×Äþ</td>
+				<td>ÄÐ</td>
+				<td>18</td>
+			</tr>
+			
+			<tr onmouseover="changeColor(this)" onmouseout="changeColor(this)">
+				<td>Î¤è¡</td>
+				<td>ÄÐ</td>
+				<td>16</td>
+			</tr>
+			
+			<tr onmouseover="changeColor(this)" onmouseout="changeColor(this)">
+				<td>Î¤è¡2</td>
+				<td>ÄÐ</td>
+				<td>16</td>
+			</tr>
+		</table>
+	</body>
+</html>

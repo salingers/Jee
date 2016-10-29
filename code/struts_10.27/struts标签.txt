@@ -1,0 +1,9 @@
+<logic:empty>
+
+<logic:notEmpty>
+
+"",NULL
+
+<logic:present>
+
+<logic:notPresetn>
