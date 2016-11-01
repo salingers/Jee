@@ -2,6 +2,7 @@
 <%@ page import="tw.com.javaworld.CH10.Book"%>
 <%
 	Vector buylist = (Vector) session.getAttribute("shoppingcart");
+
 	String action = request.getParameter("action");
 
 	if (action.equals("DELETE"))
@@ -10,7 +11,6 @@
 		int d = (new Integer(del)).intValue();
 		buylist.removeElementAt(d);
 	}
-
 	else if (action.equals("ADD"))
 	{
 		boolean match = false;
@@ -52,11 +52,7 @@
 %>
 <html>
 <head>
-<title>CH10 - Store.jsp</title>
-</head>
 <body>
-
-	<h2>目前您購物車的內容如下：</h2>
 
 	<table border="1" width="631">
 		<tr bgcolor="#999999">
@@ -88,8 +84,8 @@
 			<td><b><%=order.getName()%></b></td>
 			<td><b><%=order.getAuthor()%></b></td>
 			<td><b><%=order.getPublisher()%></b></td>
-			<td><b><div align="right"><%=order.getPrice()%></div></b></td>
-			<td><b><div align="right"><%=order.getQuantity()%></div></b></td>
+			<td><b><%=order.getPrice()%></b></td>
+			<td><b><%=order.getQuantity()%></b></td>
 			<td>
 				<form name="deleteForm" action="Store.jsp" method="POST">
 					<input type="submit" value="Delete"> <input type="hidden"
@@ -113,7 +109,6 @@
 		else
 		{
 	%>
-	<h2>目前您的購物車沒有任何物品：</h2>
 	<br>
 	<a href="Store.html">繼續購物</a>
 	<%

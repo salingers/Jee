@@ -3,7 +3,6 @@
 
 <html>
 <head>
-<title>CH11 - Login.jsp</title>
 </head>
 <body>
 	<h2>½Ðµn¤J - ¦WºÙ¡Gadmin ±K½X¡G1234</h2>

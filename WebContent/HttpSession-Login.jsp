@@ -7,6 +7,7 @@
 <body>
 
 	<h2>javax.servlet.http.HttpSession - session клеє</h2>
+
 	<form action=HttpSession-Login.jsp method="POST">
 		Login Name: <input type="text" name="Name"><br> Login
 		Password: <input type="text" name="Password"><br> <input

@@ -16,7 +16,6 @@ public class MyServletContextListener implements ServletContextListener
 
 	public void contextDestroyed(ServletContextEvent event)
 	{
-
 		event.getServletContext().log("Tomcat is Shutdown ...");
 	}
 

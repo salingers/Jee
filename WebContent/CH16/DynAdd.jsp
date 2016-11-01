@@ -14,12 +14,11 @@
 
 		<jsp:attribute name="great">
 		<font color="red">SUM¡G${sum} ...</red>
-	
 		
 		</jsp:attribute>
+
 		<jsp:attribute name="less">
-		<font color="blue">SUM¡G${sum} ...</red>
-	
+		<font color="blue">SUM¡G${sum} ...</red>		
 		
 		</jsp:attribute>
 	</JSPBook:DynAdd>

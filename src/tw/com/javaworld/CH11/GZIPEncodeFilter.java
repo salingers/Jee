@@ -16,6 +16,7 @@ public class GZIPEncodeFilter implements Filter
 			throws IOException, ServletException
 	{
 		String transferEncoding = getGZIPEncoding((HttpServletRequest) request);
+
 		if (transferEncoding == null)
 		{
 			chain.doFilter(request, response);
@@ -36,17 +37,24 @@ public class GZIPEncodeFilter implements Filter
 	private static String getGZIPEncoding(HttpServletRequest request)
 	{
 		String acceptEncoding = request.getHeader("Accept-Encoding");
+
 		if (acceptEncoding == null)
+		{
 			return null;
+		}
+
 		acceptEncoding = acceptEncoding.toLowerCase();
+
 		if (acceptEncoding.indexOf("x-gzip") >= 0)
 		{
 			return "x-gzip";
 		}
+
 		if (acceptEncoding.indexOf("gzip") >= 0)
 		{
 			return "gzip";
 		}
+
 		return null;
 	}
 

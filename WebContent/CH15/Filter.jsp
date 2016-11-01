@@ -26,9 +26,7 @@
 
 		<pre>폻ⓕ�{─짽</pre>
 		<br>
-		<font color=red>
-			<h3>폻ⓕ�{─짽</h3>
-		</font>
+
 
 	</mytag:filter>
 
